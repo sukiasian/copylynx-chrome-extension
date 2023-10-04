@@ -1,0 +1,21 @@
+{
+    "manifest_version": 3,
+    "name": "CopyLynx",
+    "description": "Need to easily copy URL from a link on a web page? Try CopyLynx! Just hover wherever there is a link and push copy keys: \n (ctrl + c on Windows, cmd + c on mac)",
+    "version": "1.0",
+    "action": {
+        "default_icon": "images/icon-16.png"
+    },
+    "permissions": ["activeTab", "scripting"],
+
+    "icons": {
+        "16": "images/icon-16.png",
+        "128": "images/icon-128.png"
+    },
+    "content_scripts": [
+        {
+            "matches": ["http://*/*", "https://*/*"],
+            "js": ["scripts/content.js"]
+        }
+    ]
+}
